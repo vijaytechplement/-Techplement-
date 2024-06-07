@@ -48,9 +48,11 @@ I learned how to make sure the website is easy for people to use by testing it w
 
 ☛ Built With 💕
 
-HTML
-CSS
-Javascript
+∎ HTML
+
+∎ CSS
+
+∎ Javascript
 
 ☛ Conclusion 🤩
 
