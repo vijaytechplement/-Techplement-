@@ -14,7 +14,7 @@ body {
     place-items: center;
 }
 
-.container {
+.container, .createQuizContainer {
     width: 80%;
     max-width: 850px;
     padding: 30px;
@@ -22,9 +22,24 @@ body {
     display: none;
 }
 
-.container h1 {
+.container h1, .createQuizContainer h2 {
     font-size: 46px;
     margin-bottom: 60px;
+}
+
+.createQuizContainer form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.createQuizContainer form input, .createQuizContainer form select {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.createQuizContainer .btn {
+    margin-top: 20px;
 }
 
 .container .question {
@@ -51,16 +66,16 @@ body {
     animation: fade-in 0.5s ease forwards;
 }
 
-.choice:hover{
+.choice:hover {
     background-color: #ddd;
 }
 
-.choice.selected{
+.choice.selected {
     background-color: #007bff;
     color: #fff;
 }
 
-.btn{
+.btn {
     width: 60%;
     font-size: 20px;
     font-weight: 600;
@@ -73,16 +88,16 @@ body {
     cursor: pointer;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: #087864;
 }
 
-.scoreCard{
+.scoreCard, .feedback {
     font-size: 24px;
     margin-top: 20px;
 }
 
-.alert{
+.alert {
     background-color: #5d9b63;
     border-radius: 5px;
     width: 100%;
@@ -92,13 +107,13 @@ body {
     display: none;
 }
 
-.startBtn{
+.startBtn, .createQuizBtn {
     width: 15%;
     padding-block: 20px;
     text-align: center;
 }
 
-.timer{
+.timer {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -116,51 +131,50 @@ body {
     animation: pulse 1s ease-in-out infinite;
 }
 
-
 /* Adding Animation to Timer */
-@keyframes pulse{
-    0%{
+@keyframes pulse {
+    0% {
         transform: scale(1);
     }
-    50%{
+    50% {
         transform: scale(1.2);
     }
-    100%{
+    100% {
         transform: scale(1);
     }
 }
 
 /* Adding Animation to choices */
-@keyframes fade-in{
-    0%{
+@keyframes fade-in {
+    0% {
         opacity: 0;
         transform: translateY(50%);
     }
-    100%{
+    100% {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-@media screen and (max-width:900px){
-    .container {
+@media screen and (max-width: 900px) {
+    .container, .createQuizContainer {
         width: 100%;
         margin-top: 50px;
     }
-    .container h1{
+    .container h1, .createQuizContainer h2 {
         font-size: 24px;
     }
-    .container .question{
+    .container .question {
         font-size: 22px;
     }
 
-    .timer{
+    .timer {
         width: 50px;
         height: 50px;
         font-size: 20px;
     }
 
-    .startBtn{
+    .startBtn, .createQuizBtn {
         width: 50%;
     }
 }
